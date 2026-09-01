@@ -102,7 +102,7 @@ para crear una experiencia centrada en el recuerdo y el vínculo entre las perso
 |---|---|
 | **Josué Aarón Paredes Vásquez** | Creador de la página web |
 | **Angelina Araceli Rodríguez de la Cruz** | Creadora del producto |
-| **Yamilé Angelique Andrade Castañeda Andrade** | Hizo posible el producto |
+| **Yamilé Angelique Castañeda Andrade** | Hizo posible el producto |
 | **Marcos Aldair Rengifo Mendoza** | Aportó ideas para la página web |
 
 ## 🧑‍💻 Josué Aarón Paredes Vásquez
