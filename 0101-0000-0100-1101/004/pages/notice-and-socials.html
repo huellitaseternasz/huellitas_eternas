@@ -1,0 +1,1548 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <meta
+        name="description"
+        content="Huellitas Eternas: un espacio para conservar recuerdos,
+        honrar el vínculo con nuestras mascotas y presentar nuestros
+        llaveros QR."
+    >
+
+    <meta
+        name="author"
+        content="Huellitas Eternas"
+    >
+
+    <meta
+        name="theme-color"
+        content="#faabe9"
+    >
+
+    <title>
+        Noticias y Redes Sociales | Huellitas Eternas
+    </title>
+
+
+    <!-- ICONOS: serán creados posteriormente dentro de assets/ -->
+
+    <link
+        rel="icon"
+        type="image/x-icon"
+        href="../../003/images/favicon.svg">
+
+
+    <!-- CSS -->
+
+    <link
+        rel="stylesheet"
+        href="../../001/css/s.css"
+    >
+
+    <link
+        rel="stylesheet"
+        href="../../001/css/c.css"
+    >
+
+    <link
+        rel="stylesheet"
+        href="../../001/css/b.css"
+    >
+
+    <link
+        rel="stylesheet"
+        href="../../001/css/a.css"
+    >
+
+    <link
+        rel="stylesheet"
+        href="../../001/css/sc.css"
+    >
+
+</head>
+
+
+<body>
+
+    <!-- =====================================================
+         ESTILOS LOCALES — NOTICIAS Y CATEGORÍAS
+         ===================================================== -->
+
+    <style>
+
+        .news-category-buttons {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 12px;
+            margin: 30px auto 40px;
+        }
+
+        .news-category-button {
+            border: 1px solid #e8b8c2;
+            border-radius: 999px;
+            padding: 12px 20px;
+            background: #fffaf5;
+            color: #7d4f59;
+            font-family: inherit;
+            font-size: .95rem;
+            font-weight: 600;
+            cursor: pointer;
+            transition:
+                transform .25s ease,
+                box-shadow .25s ease,
+                background-color .25s ease,
+                color .25s ease;
+        }
+
+        .news-category-button:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 8px 20px rgba(125,79,89,.12);
+        }
+
+        .news-category-button.active {
+            background: #d98f9c;
+            color: #ffffff;
+            border-color: #d98f9c;
+            box-shadow: 0 8px 22px rgba(217,143,156,.25);
+        }
+
+        .news-category-panel[hidden] {
+            display: none !important;
+        }
+
+        .news-category-panel {
+            animation: newsCategoryAppear .35s ease both;
+        }
+
+        .news-grid {
+            display: grid;
+            grid-template-columns:
+                repeat(2, minmax(0, 1fr));
+            gap: 24px;
+        }
+
+        .news-card {
+            border: 1px solid rgba(217,143,156,.22);
+            border-radius: 24px;
+            padding: 28px;
+            background: #fffaf5;
+            box-shadow: 0 12px 30px rgba(125,79,89,.08);
+        }
+
+        .news-card-featured {
+            grid-column: 1 / -1;
+        }
+
+        .news-card-badge {
+            display: inline-block;
+            margin-bottom: 12px;
+            padding: 6px 11px;
+            border-radius: 999px;
+            background: #faabe9;
+            color: #6e4650;
+            font-size: .72rem;
+            font-weight: 800;
+            letter-spacing: .04em;
+        }
+
+        .news-card-date {
+            margin-bottom: 8px;
+            color: #8f6971;
+            font-size: .88rem;
+        }
+
+        .news-card-title {
+            margin: 0 0 12px;
+            color: #5f3d45;
+        }
+
+        .news-card-description {
+            color: #765860;
+            line-height: 1.75;
+        }
+
+        .news-update-placeholder {
+            margin-top: 22px;
+            padding: 18px;
+            border-radius: 16px;
+            border-left: 4px solid #d98f9c;
+            background: rgba(250,171,233,.12);
+        }
+
+        .news-update-placeholder p {
+            margin-bottom: 0;
+        }
+
+        .news-publishing-note {
+            display: flex;
+            align-items: flex-start;
+            gap: 18px;
+            margin-top: 34px;
+            padding: 24px;
+            border-radius: 22px;
+            background: #fffaf5;
+            border: 1px dashed #d98f9c;
+        }
+
+        .news-publishing-icon {
+            flex: 0 0 auto;
+            font-size: 2rem;
+        }
+
+        .news-publishing-note h3 {
+            margin-top: 0;
+        }
+
+        .news-publishing-note p {
+            margin-bottom: 0;
+        }
+
+        @keyframes newsCategoryAppear {
+
+            from {
+                opacity: 0;
+                transform: translateY(12px);
+            }
+
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+
+        }
+
+        @media (max-width: 700px) {
+
+            .news-category-buttons {
+                display: grid;
+                grid-template-columns: 1fr;
+            }
+
+            .news-category-button {
+                width: 100%;
+            }
+
+            .news-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .news-card-featured {
+                grid-column: auto;
+            }
+
+            .news-card {
+                padding: 22px;
+            }
+
+            .news-publishing-note {
+                flex-direction: column;
+            }
+
+        }
+
+    </style>
+
+    <!-- =====================================================
+         HEADER
+         ===================================================== -->
+
+    <header
+        class="site-header"
+        id="inicio"
+    >
+
+        <div class="container header-container">
+
+
+            <!-- ==================== MARCA ==================== -->
+
+            <a
+                href="../../../home.html"
+                class="brand"
+                aria-label="Huellitas Eternas - Inicio"
+                data-animation="fade-right"
+            >
+
+                <span
+                    class="brand-icon"
+                    aria-hidden="true"
+                >
+                    <img
+                        src="../../003/images/icon.png"
+                        alt="logo"
+                    >
+                </span>
+
+
+                <span class="brand-text">
+
+                    <span class="brand-name">
+                        Huellitas
+                    </span>
+
+                    <span class="brand-subtitle">
+                        Eternas
+                    </span>
+
+                </span>
+
+            </a>
+
+
+            <!-- ==================== NAVEGACIÓN ==================== -->
+
+            <nav
+                class="main-navigation"
+                id="main-navigation"
+                aria-label="Navegación principal"
+            >
+
+                <ul class="navigation-list">
+
+
+                    <li>
+                        <a
+                            href="../../../home.html"
+                            class="navigation-link"
+                        >
+                            Inicio
+                        </a>
+                    </li>
+
+
+                    <li>
+                        <a
+                            href="../../../home.html#nosotros"
+                            class="navigation-link"
+                        >
+                            Nosotros
+                        </a>
+                    </li>
+
+
+                    <li>
+                        <a
+                            href="product.html"
+                            class="navigation-link"
+                        >
+                            Producto
+                        </a>
+                    </li>
+
+
+                    <li>
+                        <a
+                            href="more.html"
+                            class="navigation-link"
+                        >
+                                Más información
+                        </a>
+                    </li>
+
+
+                    <li>
+                        <a
+                            href="memorials.html"
+                            class="navigation-link"
+                        >
+                            Memoriales
+                        </a>
+                    </li>
+
+
+                    <li>
+                        <a
+                            href="opinions.html"
+                            class="navigation-link"
+                        >
+                            Opiniones
+                        </a>
+                    </li>
+
+
+                    <li>
+                        <a
+                            href="#noticias"
+                            class="navigation-link active"
+                        >
+                            Noticias
+                        </a>
+                    </li>
+
+
+                    <li>
+                        <a
+                            href="#social-links"
+                            class="navigation-link"
+                        >
+                            Redes Sociales
+                        </a>
+                    </li>
+
+
+                    <li>
+                        <a
+                            href="contact.html"
+                            class="navigation-link"
+                        >
+                            Contacto
+                        </a>
+                    </li>
+
+
+                </ul>
+
+            </nav>
+
+
+            <!-- ==================== MENÚ MÓVIL ==================== -->
+
+            <button
+                type="button"
+                class="menu-button"
+                id="menu-button"
+                aria-label="Abrir menú"
+                aria-expanded="false"
+                aria-controls="main-navigation"
+            >
+
+                <span></span>
+                <span></span>
+                <span></span>
+
+            </button>
+
+
+        </div>
+
+    </header>
+
+
+
+        <!-- =====================================================
+         CONTENIDO PRINCIPAL
+         ===================================================== -->
+
+    <main id="contenido-principal">
+
+
+        <!-- ==================================================
+             HERO
+             ================================================== -->
+
+             <section
+            class="page-hero-section"
+            id="noticias"
+            aria-labelledby="page-title"
+        >
+
+            <div class="container page-hero-container">
+
+
+                <div
+                    class="page-hero-content"
+                    data-animation="fade-left"
+                >
+
+
+                    <p
+                        class="hero-eyebrow"
+                        data-animation="fade-up"
+                    >
+                        Noticias y Redes sociales
+                    </p>
+
+
+                    <h1
+                        id="page-title"
+                        class="hero-title"
+                        data-animation="fade-up"
+                        data-delay="100"
+                    >
+                        Notificate y Unete a nuestra Comunidad   
+                    </h1>
+
+
+                    <p
+                        class="hero-description"
+                        data-animation="fade-up"
+                        data-delay="200"
+                    >
+                        No te quedes pierdas nuestras Noticias, contactanos
+                        por las redes sociales y reviza nuestras
+                        nuevas actualizaciones y las noticias que traemos.
+                    </p>
+
+
+                </div>
+
+                    <div
+                    class="page-hero-media"
+                    data-animation="fade-right"
+                    data-delay="200"
+                >
+
+                    <img
+                        src="../../003/images/Huellitas-Noticias-Redes-Sociales.png"
+                        alt="Producto"
+                        class="page-hero-image"
+                    >
+
+                    </div>
+
+
+                </div>
+
+
+                </div>
+
+
+            </div>
+
+        </section>
+
+
+            <!-- =================================================
+             NOTICIAS
+             ================================================= -->
+
+        <section
+            class="news-section"
+            id="noticias"
+            aria-labelledby="news-title"
+        >
+
+            <div class="container">
+
+                <div class="section-heading" data-animation="fade-up">
+
+                    <p class="section-eyebrow">
+                        Mantente al día
+                    </p>
+
+                    <h2
+                        id="news-title"
+                        class="section-title"
+                    >
+                        Noticias y actualizaciones
+                    </h2>
+
+                    <p class="section-description">
+                        Aquí podrás encontrar las novedades de Huellitas Eternas,
+                        nuestros nuevos proyectos, actividades y las historias
+                        que vamos construyendo junto a nuestra comunidad.
+                    </p>
+
+                </div>
+
+
+                <!-- ==============================================
+                     CATEGORÍAS DE NOTICIAS
+                     ============================================== -->
+
+                <div
+                    class="news-category-buttons"
+                    role="tablist"
+                    aria-label="Categorías de noticias"
+                >
+
+                    <button
+                        type="button"
+                        class="news-category-button active"
+                        role="tab"
+                        aria-selected="true"
+                        aria-controls="news-panel-actualizaciones"
+                        data-news-category="actualizaciones"
+                    >
+                        ✨ Nuevas actualizaciones
+                    </button>
+
+                    <button
+                        type="button"
+                        class="news-category-button"
+                        role="tab"
+                        aria-selected="false"
+                        aria-controls="news-panel-comunidad"
+                        data-news-category="comunidad"
+                    >
+                        🐾 Comunidad
+                    </button>
+
+                    <button
+                        type="button"
+                        class="news-category-button"
+                        role="tab"
+                        aria-selected="false"
+                        aria-controls="news-panel-ayuda"
+                        data-news-category="ayuda"
+                    >
+                        ❤️ Ayudando mascotas
+                    </button>
+
+                    <button
+                        type="button"
+                        class="news-category-button"
+                        role="tab"
+                        aria-selected="false"
+                        aria-controls="news-panel-la-libertad"
+                        data-news-category="la-libertad"
+                    >
+                        📍 La Libertad
+                    </button>
+
+                    <button
+                        type="button"
+                        class="news-category-button"
+                        role="tab"
+                        aria-selected="false"
+                        aria-controls="news-panel-proyectos"
+                        data-news-category="proyectos"
+                    >
+                        🚀 Proyectos
+                    </button>
+
+                    <button
+                        type="button"
+                        class="news-category-button"
+                        role="tab"
+                        aria-selected="false"
+                        aria-controls="news-panel-eventos"
+                        data-news-category="eventos"
+                    >
+                        🎉 Eventos
+                    </button>
+
+                    <button
+                        type="button"
+                        class="news-category-button"
+                        role="tab"
+                        aria-selected="false"
+                        aria-controls="news-panel-historias"
+                        data-news-category="historias"
+                    >
+                        🐶 Historias
+                    </button>
+
+                </div>
+
+
+                <!-- ==============================================
+                     PANEL: NUEVAS ACTUALIZACIONES
+                     ESTE ES EL PANEL QUE PODRÁS ACTUALIZAR
+                     ============================================== -->
+
+                <div
+                    class="news-category-panel active"
+                    id="news-panel-actualizaciones"
+                    data-news-panel="actualizaciones"
+                    role="tabpanel"
+                >
+
+                    <div class="news-grid">
+
+                        <article
+                            class="news-card news-card-featured"
+                            data-news-type="actualizacion"
+                        >
+
+                            <div class="news-card-content">
+
+                                <span class="news-card-badge">
+                                    NUEVA ACTUALIZACIÓN
+                                </span>
+
+                                <p class="news-card-date">
+                                    📅 actualización 1.0.0
+                                </p>
+
+                                <h3 class="news-card-title">
+                                    ¡Traemos la Primera versión Oficial!
+                                </h3>
+
+                                <p class="news-card-description">
+                                    Primera versión oficial de Huellitas Eternas
+                                    mantente informado sobre las nuevas actualizaciones de
+                                    Huellitas Eternas.
+                                </p>
+
+                                <div class="news-update-placeholder">
+
+                                    <strong>
+                                        📝 Nuevas Noticias
+                                    </strong>
+
+                                    <p>
+                                        Acabamos de estrenas la Primera versión de Huellitas Eternas,
+                                        la versión 1.0.0. Estaremos Notificando sobre la Nuevas Actualizaciones.
+                                    </p>
+
+                                </div>
+
+                            </div>
+
+                        </article>
+
+
+                        <article class="news-card">
+
+                            <div class="news-card-content">
+
+                                <span class="news-card-badge">
+                                    PROYECTO
+                                </span>
+
+                                <p class="news-card-date">
+                                    📢 Novedades
+                                </p>
+
+                                <h3 class="news-card-title">
+                                    Huellitas Eternas sigue creciendo
+                                </h3>
+
+                                <p class="news-card-description">
+                                    Estamos trabajando para mejorar nuestra
+                                    página, nuestros productos y las experiencias
+                                    que queremos ofrecer a nuestra comunidad.
+                                </p>
+
+                            </div>
+
+                        </article>
+
+                    </div>
+
+                </div>
+
+
+                <!-- ==============================================
+                     PANEL: COMUNIDAD
+                     ============================================== -->
+
+                <div
+                    class="news-category-panel"
+                    id="news-panel-comunidad"
+                    data-news-panel="comunidad"
+                    role="tabpanel"
+                    hidden
+                >
+
+                    <div class="news-grid">
+
+                        <article class="news-card">
+
+                            <div class="news-card-content">
+
+                                <span class="news-card-badge">
+                                    COMUNIDAD
+                                </span>
+
+                                <h3 class="news-card-title">
+                                    Creciendo junto a nuestra comunidad
+                                </h3>
+
+                                <p class="news-card-description">
+                                    Queremos construir una comunidad donde
+                                    las personas puedan compartir el amor,
+                                    cuidado y respeto que sienten por sus mascotas.
+                                </p>
+
+                            </div>
+
+                        </article>
+
+
+                        <article class="news-card">
+
+                            <div class="news-card-content">
+
+                                <span class="news-card-badge">
+                                    PARTICIPACIÓN
+                                </span>
+
+                                <h3 class="news-card-title">
+                                    Tu historia también puede formar parte
+                                </h3>
+
+                                <p class="news-card-description">
+                                    Esta sección podrá utilizarse para compartir
+                                    actividades, iniciativas y experiencias
+                                    realizadas junto a nuestra comunidad.
+                                </p>
+
+                            </div>
+
+                        </article>
+
+                    </div>
+
+                </div>
+
+
+                <!-- ==============================================
+                     PANEL: AYUDANDO MASCOTAS
+                     ============================================== -->
+
+                <div
+                    class="news-category-panel"
+                    id="news-panel-ayuda"
+                    data-news-panel="ayuda"
+                    role="tabpanel"
+                    hidden
+                >
+
+                    <div class="news-grid">
+
+                        <article class="news-card news-card-featured">
+
+                            <div class="news-card-content">
+
+                                <span class="news-card-badge">
+                                    AYUDA A MASCOTAS
+                                </span>
+
+                                <h3 class="news-card-title">
+                                    Una huellita que queremos dejar en nuestra comunidad
+                                </h3>
+
+                                <p class="news-card-description">
+                                    Huellitas Eternas busca apoyar iniciativas
+                                    relacionadas con el bienestar y cuidado
+                                    responsable de las mascotas.
+                                </p>
+
+                                <p class="news-card-description">
+                                    Queremos llevar esta iniciativa a diferentes
+                                    comunidades de La Libertad y, con el tiempo,
+                                    a otros lugares donde podamos aportar.
+                                </p>
+
+                            </div>
+
+                        </article>
+
+
+                        <article class="news-card">
+
+                            <div class="news-card-content">
+
+                                <span class="news-card-badge">
+                                    FUTURAS INICIATIVAS
+                                </span>
+
+                                <h3 class="news-card-title">
+                                    Apoyando a más comunidades
+                                </h3>
+
+                                <p class="news-card-description">
+                                    Aquí podremos publicar las campañas,
+                                    colaboraciones y acciones que realicemos
+                                    para ayudar a mascotas y familias.
+                                </p>
+
+                            </div>
+
+                        </article>
+
+                    </div>
+
+                </div>
+
+
+                <!-- ==============================================
+                     PANEL: LA LIBERTAD
+                     ============================================== -->
+
+                <div
+                    class="news-category-panel"
+                    id="news-panel-la-libertad"
+                    data-news-panel="la-libertad"
+                    role="tabpanel"
+                    hidden
+                >
+
+                    <div class="news-grid">
+
+                        <article class="news-card">
+
+                            <div class="news-card-content">
+
+                                <span class="news-card-badge">
+                                    LA LIBERTAD
+                                </span>
+
+                                <h3 class="news-card-title">
+                                    Nuestra iniciativa en diferentes provincias
+                                </h3>
+
+                                <p class="news-card-description">
+                                    Queremos que Huellitas Eternas pueda llegar
+                                    progresivamente a diferentes provincias y
+                                    comunidades de la región La Libertad.
+                                </p>
+
+                            </div>
+
+                        </article>
+
+
+                        <article class="news-card">
+
+                            <div class="news-card-content">
+
+                                <span class="news-card-badge">
+                                    TRABAJO LOCAL
+                                </span>
+
+                                <h3 class="news-card-title">
+                                    Noticias de nuestras comunidades
+                                </h3>
+
+                                <p class="news-card-description">
+                                    Este espacio queda preparado para publicar
+                                    las actividades y novedades realizadas
+                                    en cada provincia o localidad.
+                                </p>
+
+                            </div>
+
+                        </article>
+
+                    </div>
+
+                </div>
+
+
+                <!-- ==============================================
+                     PANEL: PROYECTOS
+                     ============================================== -->
+
+                <div
+                    class="news-category-panel"
+                    id="news-panel-proyectos"
+                    data-news-panel="proyectos"
+                    role="tabpanel"
+                    hidden
+                >
+
+                    <div class="news-grid">
+
+                        <article class="news-card">
+
+                            <div class="news-card-content">
+
+                                <span class="news-card-badge">
+                                    PROYECTOS
+                                </span>
+
+                                <h3 class="news-card-title">
+                                    Nuevos proyectos en camino
+                                </h3>
+
+                                <p class="news-card-description">
+                                    Aquí podremos anunciar nuevas funciones,
+                                    productos, páginas, herramientas e
+                                    iniciativas de Huellitas Eternas.
+                                </p>
+
+                            </div>
+
+                        </article>
+
+
+                        <article class="news-card">
+
+                            <div class="news-card-content">
+
+                                <span class="news-card-badge">
+                                    DESARROLLO
+                                </span>
+
+                                <h3 class="news-card-title">
+                                    Seguimos construyendo
+                                </h3>
+
+                                <p class="news-card-description">
+                                    Publicaremos avances importantes del
+                                    desarrollo y de las nuevas experiencias
+                                    que vayamos preparando.
+                                </p>
+
+                            </div>
+
+                        </article>
+
+                    </div>
+
+                </div>
+
+
+                <!-- ==============================================
+                     PANEL: EVENTOS
+                     ============================================== -->
+
+                <div
+                    class="news-category-panel"
+                    id="news-panel-eventos"
+                    data-news-panel="eventos"
+                    role="tabpanel"
+                    hidden
+                >
+
+                    <div class="news-grid">
+
+                        <article class="news-card">
+
+                            <div class="news-card-content">
+
+                                <span class="news-card-badge">
+                                    EVENTOS
+                                </span>
+
+                                <h3 class="news-card-title">
+                                    Próximos eventos
+                                </h3>
+
+                                <p class="news-card-description">
+                                    Cuando tengamos una actividad o evento,
+                                    podrás verlo aquí.
+                                </p>
+
+                            </div>
+
+                        </article>
+
+                    </div>
+
+                </div>
+
+
+                <!-- ==============================================
+                     PANEL: HISTORIAS
+                     ============================================== -->
+
+                <div
+                    class="news-category-panel"
+                    id="news-panel-historias"
+                    data-news-panel="historias"
+                    role="tabpanel"
+                    hidden
+                >
+
+                    <div class="news-grid">
+
+                        <article class="news-card news-card-featured">
+
+                            <div class="news-card-content">
+
+                                <span class="news-card-badge">
+                                    HISTORIAS
+                                </span>
+
+                                <h3 class="news-card-title">
+                                    Historias que dejan una huellita
+                                </h3>
+
+                                <p class="news-card-description">
+                                    "Una familia acaba de perder a su Mascota Alpha,
+                                    Alpha es una mascota que estuvo siempre acompañando
+                                    a esta familia, en las Buenas y en las Malas, la
+                                    familia devastada por el fallecimiento de la mascota
+                                    se comunicaron con nosotros, nos pidieron
+                                    un memorial en honor a su Mascota, no tenian dinero,
+                                    haci que gracias a Nuestra comunidad, pudimos crearle
+                                    un llavero, y un Memorial en honor a esa Mascota querida,
+                                    La familia nunca se olvida."                             
+                                    Historias Inolvidables Huellitas eternas 🐾
+                                </p>
+
+                            </div>
+
+                        </article>
+
+                    </div>
+
+                </div>
+
+
+                <!-- ==============================================
+                     AVISO PARA FUTURAS PUBLICACIONES
+                     ============================================== -->
+
+                <div
+                    class="news-publishing-note"
+                    data-animation="fade-up"
+                >
+
+                    <div class="news-publishing-icon" aria-hidden="true">
+                        📝
+                    </div>
+
+                    <div>
+
+                        <h3>
+                            Nueva Actualización 🌟
+                        </h3>
+
+                        <p>
+                            Primera Versión oficial de Huellitas Eternas
+                            mantente informado sobre las nuevas actualizaciones de
+                            Huellitas Eternas.
+                        </p>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- =================================================
+             REDES SOCIALES
+             ================================================= -->
+
+        <section class="social-section"
+                 id="social-links"
+                 aria-labelledby="social-title">
+
+            <div class="container">
+
+                <div class="section-heading" data-animation="fade-up">
+
+                    <p class="section-eyebrow">
+                        Redes Sociales
+                    </p>
+
+                    <h2 id="social-title"
+                        class="section-title">
+                        Sigamos conectados.
+                    </h2>
+
+                    <p class="section-description">
+                        Esta sección queda preparada para incorporar
+                        las redes oficiales de Huellitas Eternas
+                        cuando estén disponibles.
+                    </p>
+
+                </div>
+
+
+                <div class="social-links" class="social-links-grid">
+
+
+                    <a data-animation="fade-up" data-delay="100" href="https://www.instagram.com/huellitaseternas82384?utm_source=qr"
+                       class="social-link"
+                       data-social="instagram"
+                       aria-label="Instagram de Huellitas Eternas">
+
+                        <span class="social-icon"
+                              aria-hidden="true">
+                            <i class="fa-brands fa-instagram"></i>
+                        </span>
+
+                        <span class="social-name">
+                            Instagram
+                        </span>
+
+                    </a>
+
+
+                    <a data-animation="fade-up" data-delay="200" href="https://web.facebook.com/profile.php?id=61592551116124"
+                       class="social-link"
+                       data-social="facebook"
+                       aria-label="Facebook de Huellitas Eternas">
+
+                        <span class="social-icon"
+                              aria-hidden="true">
+                            <i class="fa-brands fa-facebook"></i>
+                        </span>
+
+                        <span class="social-name">
+                            Facebook
+                        </span>
+
+                    </a>
+
+
+                    <a data-animation="fade-up" data-delay="300" href="https://www.tiktok.com/@huellitas.eternas3?_r=1&_t=ZS-98UhQC3Q0c1"
+                       class="social-link"
+                       data-social="tiktok"
+                       aria-label="TikTok de Huellitas Eternas">
+
+                        <span class="social-icon"
+                              aria-hidden="true">
+                            <i class="fa-brands fa-tiktok"></i>
+                        </span>
+
+                        <span class="social-name">
+                            TikTok
+                        </span>
+
+                    </a>
+
+
+                    <a data-animation="fade-up" data-delay="400" href="https://www.youtube.com/channel/UCA_rBM7fcgEpwxgWjntxxLg"
+                       class="social-link"
+                       data-social="whatsapp"
+                       aria-label="WhatsApp de Huellitas Eternas">
+
+                        <span class="social-icon"
+                              aria-hidden="true">
+                            <i class="fa-brands fa-youtube"></i>
+                        </span>
+
+                        <span class="social-name">
+                            YouTube
+                        </span>
+
+                    </a>
+
+                </div>
+
+            </div>
+
+        </section>
+
+        </main>
+
+
+    <!-- =====================================================
+         FOOTER
+         ===================================================== -->
+
+    <footer class="site-footer">
+
+
+        <div class="container footer-container">
+
+
+            <!-- ==================== MARCA ==================== -->
+
+            <div
+                class="footer-brand"
+                data-animation="fade-up"
+            >
+
+
+                <a
+                    href="../../../home.html"
+                    class="brand"
+                    aria-label="Volver al inicio"
+                >
+
+
+                    <span
+                        class="brand-icon"
+                        aria-hidden="true"
+                    >
+
+                        <img
+                            src="../../003/images/icon.png"
+                            alt="icon"
+                        >
+
+                    </span>
+
+
+                    <span class="brand-text">
+
+                        <span class="brand-name">
+                            Huellitas
+                        </span>
+
+                        <span class="brand-subtitle">
+                            Eternas
+                        </span>
+
+                    </span>
+
+
+                </a>
+
+
+                <p class="footer-description">
+                    Un espacio para recordar, honrar y conservar
+                    las historias de quienes dejaron una huellita
+                    en nuestras vidas.
+                </p>
+
+
+            </div>
+
+
+
+            <!-- ==================== NAVEGACIÓN FOOTER ==================== -->
+
+            <div
+                class="footer-navigation"
+                data-animation="fade-up"
+                data-delay="100"
+            >
+
+
+                <h2 class="footer-title">
+                    Explora
+                </h2>
+
+
+                <ul>
+
+                    <li>
+                        <a href="../../../home.html">
+                            Inicio
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="../../../home.html#nosotros">
+                            Nosotros
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="product.html">
+                            Producto
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="memorials.html">
+                            Memoriales
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="opinions.html">
+                            Opiniones
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="contact.html">
+                            Contacto
+                        </a>
+                    </li>
+
+                </ul>
+
+
+            </div>
+
+
+
+            <!-- ==================== INFORMACIÓN ==================== -->
+
+            <div
+                class="footer-information"
+                data-animation="fade-up"
+                data-delay="200"
+            >
+
+
+                <h2 class="footer-title">
+                    Información
+                </h2>
+
+
+                <ul>
+
+
+                    <li>
+
+                        <a
+                            href="more.html"
+                        >
+                        Más información
+                        </a>
+
+                    </li>
+
+
+                    <li>
+
+                        <a
+                            href="terms.html"
+                        >
+                            Terminos
+                        </a>
+
+                    </li>
+
+
+                    <li>
+
+                        <a
+                            href="priv.html"
+                        >
+                            Privacidad
+                        </a>
+
+                    </li>
+
+
+                    <li>
+
+                        <a
+                            href="notice-and-socials.html"
+                        >
+                            Noticias y Redes Sociales
+                        </a>
+
+                    </li>
+
+
+                </ul>
+
+
+            </div>
+
+
+        </div>
+
+
+
+        <!-- ==================== FOOTER BOTTOM ==================== -->
+
+        <div class="footer-bottom">
+
+            <div class="container">
+
+                <p>
+                    © 2026 Huellitas Eternas.
+                    Todos los derechos reservados.
+                </p>
+
+            </div>
+
+        </div>
+
+    </footer>
+
+
+    <!-- =====================================================
+         JAVASCRIPT — CATEGORÍAS DE NOTICIAS
+         ===================================================== -->
+
+    <script>
+
+        document.addEventListener("DOMContentLoaded", function () {
+
+            const buttons =
+                document.querySelectorAll(".news-category-button");
+
+            const panels =
+                document.querySelectorAll(".news-category-panel");
+
+
+            function activateNewsCategory(category) {
+
+                buttons.forEach(function (button) {
+
+                    const active =
+                        button.dataset.newsCategory === category;
+
+                    button.classList.toggle(
+                        "active",
+                        active
+                    );
+
+                    button.setAttribute(
+                        "aria-selected",
+                        active ? "true" : "false"
+                    );
+
+                });
+
+
+                panels.forEach(function (panel) {
+
+                    const active =
+                        panel.dataset.newsPanel === category;
+
+                    panel.hidden = !active;
+
+                });
+
+            }
+
+
+            buttons.forEach(function (button) {
+
+                button.addEventListener("click", function () {
+
+                    activateNewsCategory(
+                        button.dataset.newsCategory
+                    );
+
+                });
+
+
+                button.addEventListener("keydown", function (event) {
+
+                    if (
+                        event.key === "Enter" ||
+                        event.key === " "
+                    ) {
+
+                        event.preventDefault();
+
+                        activateNewsCategory(
+                            button.dataset.newsCategory
+                        );
+
+                    }
+
+                });
+
+            });
+
+        });
+
+    </script>
+
+
+    <!-- =====================================================
+         JAVASCRIPT
+         =====================================================
+
+         Estos archivos ya están conectados.
+         ===================================================== -->
+
+
+    <script
+        src="../../002/js/s.js"
+        defer
+    ></script>
+
+
+    <script
+        src="../../002/js/b.js"
+        defer
+    ></script>
+
+
+    <script
+        src="../../002/js/a.js"
+        defer
+    ></script>
+
+
+    <script
+        src="../../002/js/sc.js"
+        defer
+    ></script>
+
+
+</body>
+
+</html>

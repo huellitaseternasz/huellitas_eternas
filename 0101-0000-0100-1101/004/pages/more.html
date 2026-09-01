@@ -1,0 +1,910 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <meta
+        name="description"
+        content="Huellitas Eternas: un espacio para conservar recuerdos,
+        honrar el vínculo con nuestras mascotas y presentar nuestros
+        llaveros QR."
+    >
+
+    <meta
+        name="author"
+        content="Huellitas Eternas"
+    >
+
+    <meta
+        name="theme-color"
+        content="#faabe9"
+    >
+
+    <title>
+        Más información | Huellitas Eternas
+    </title>
+
+
+    <!-- ICONOS: serán creados posteriormente dentro de assets/ -->
+
+    <link
+        rel="icon"
+        type="image/x-icon"
+        href="../../003/images/favicon.svg">
+
+
+
+    <style>
+        .more-category-tabs {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 12px;
+            margin: 30px 0;
+        }
+
+        .more-category-tab {
+            cursor: pointer;
+        }
+
+        .more-category-content {
+            margin-top: 25px;
+        }
+
+        .more-category-panel {
+            padding: 28px;
+            border-radius: 20px;
+            background: rgba(255,255,255,.72);
+            box-shadow: 0 10px 30px rgba(50,38,36,.08);
+            animation: moreCategoryIn .35s ease both;
+        }
+
+        .more-category-panel[hidden] {
+            display: none;
+        }
+
+        .more-category-panel h3 {
+            margin-top: 0;
+        }
+
+        .more-faq-list {
+            display: grid;
+            gap: 12px;
+        }
+
+        .more-faq-list details {
+            padding: 16px 18px;
+            border-radius: 14px;
+            background: rgba(250,171,233,.10);
+        }
+
+        .more-faq-list summary {
+            cursor: pointer;
+            font-weight: 600;
+        }
+
+        @keyframes moreCategoryIn {
+            from {
+                opacity: 0;
+                transform: translateY(10px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        @media (max-width: 700px) {
+            .more-category-tabs {
+                justify-content: stretch;
+            }
+
+            .more-category-tab {
+                width: 100%;
+            }
+
+            .more-category-panel {
+                padding: 22px;
+            }
+        }
+    </style>
+
+    <!-- CSS -->
+
+    <link
+        rel="stylesheet"
+        href="../../001/css/s.css"
+    >
+
+    <link
+        rel="stylesheet"
+        href="../../001/css/c.css"
+    >
+
+    <link
+        rel="stylesheet"
+        href="../../001/css/b.css"
+    >
+
+    <link
+        rel="stylesheet"
+        href="../../001/css/a.css"
+    >
+
+    <link
+        rel="stylesheet"
+        href="../../001/css/sc.css"
+    >
+
+</head>
+
+
+<body>
+
+    <!-- =====================================================
+         HEADER
+         ===================================================== -->
+
+    <header
+        class="site-header"
+        id="inicio"
+    >
+
+        <div class="container header-container">
+
+
+            <!-- ==================== MARCA ==================== -->
+
+            <a
+                href="../../../home.html"
+                class="brand"
+                aria-label="Huellitas Eternas - Inicio"
+                data-animation="fade-right"
+            >
+
+                <span
+                    class="brand-icon"
+                    aria-hidden="true"
+                >
+                    <img
+                        src="../../003/images/icon.png"
+                        alt="logo"
+                    >
+                </span>
+
+
+                <span class="brand-text">
+
+                    <span class="brand-name">
+                        Huellitas
+                    </span>
+
+                    <span class="brand-subtitle">
+                        Eternas
+                    </span>
+
+                </span>
+
+            </a>
+
+
+            <!-- ==================== NAVEGACIÓN ==================== -->
+
+            <nav
+                class="main-navigation"
+                id="main-navigation"
+                aria-label="Navegación principal"
+            >
+
+                <ul class="navigation-list">
+
+
+                    <li>
+                        <a
+                            href="../../../home.html"
+                            class="navigation-link"
+                        >
+                            Inicio
+                        </a>
+                    </li>
+
+
+                    <li>
+                        <a
+                            href="../../../home.html#nosotros"
+                            class="navigation-link"
+                        >
+                            Nosotros
+                        </a>
+                    </li>
+
+
+                    <li>
+                        <a
+                            href="product.html"
+                            class="navigation-link"
+                        >
+                            Producto
+                        </a>
+                    </li>
+
+
+                    <li>
+                        <a
+                            href="#más-información"
+                            class="navigation-link active"
+                        >
+                                Más información
+                        </a>
+
+
+                    <li>
+                        <a
+                            href="memorials.html"
+                            class="navigation-link"
+                        >
+                            Memoriales
+                        </a>
+                    </li>
+
+
+                    <li>
+                        <a
+                            href="opinions.html"
+                            class="navigation-link"
+                        >
+                            Opiniones
+                        </a>
+                    </li>
+
+
+                    <li>
+                        <a
+                            href="notice-and-socials.html"
+                            class="navigation-link"
+                        >
+                            Noticias y Redes Sociales
+                        </a>
+                    </li>
+
+
+                    <li>
+                        <a
+                            href="contact.html"
+                            class="navigation-link"
+                        >
+                            Contacto
+                        </a>
+                    </li>
+
+
+                </ul>
+
+            </nav>
+
+
+            <!-- ==================== MENÚ MÓVIL ==================== -->
+
+            <button
+                type="button"
+                class="menu-button"
+                id="menu-button"
+                aria-label="Abrir menú"
+                aria-expanded="false"
+                aria-controls="main-navigation"
+            >
+
+                <span></span>
+                <span></span>
+                <span></span>
+
+            </button>
+
+
+        </div>
+
+    </header>
+
+
+
+        <!-- =====================================================
+         CONTENIDO PRINCIPAL
+         ===================================================== -->
+
+    <main id="contenido-principal">
+
+
+        <!-- ==================================================
+             HERO
+             ================================================== -->
+
+             <section
+            class="page-hero-section"
+            id="más-información"
+            aria-labelledby="page-title"
+        >
+
+            <div class="container page-hero-container">
+
+
+                <div
+                    class="page-hero-content"
+                    data-animation="fade-left"
+                >
+
+
+                    <p
+                        class="hero-eyebrow"
+                        data-animation="fade-up"
+                    >
+                        Más información
+                    </p>
+
+
+                    <h1
+                        id="page-title"
+                        class="hero-title"
+                        data-animation="fade-up"
+                        data-delay="100"
+                    >
+                        Infórmate de todo   
+                    </h1>
+
+
+                    <p
+                        class="hero-description"
+                        data-animation="fade-up"
+                        data-delay="200"
+                    >
+                        No te quedes con dudas. En esta sección podrás conocer mejor nuestro proyecto, los llaveritos QR, los memoriales y todo lo relacionado con Huellitas Eternas.
+                    </p>
+
+
+                </div>
+
+                    <div
+                    class="page-hero-media"
+                    data-animation="fade-right"
+                    data-delay="200"
+                >
+
+                    <img
+                        src="../../003/images/Huellitas-Más-Información.png"
+                        alt="Producto"
+                        class="page-hero-image"
+                    >
+
+                    </div>
+
+
+                </div>
+
+
+                </div>
+
+
+            </div>
+
+        </section>
+
+
+         <!-- =================================================
+             CATEGORIAS
+             ================================================= -->
+
+        <section
+            class="more-categories-section"
+            id="más-información"
+            id="categorias-informacion"
+            aria-labelledby="categorias-title"
+        >
+            <div class="container">
+
+                <div class="section-heading" data-animation="fade-up">
+                    <p class="hero-eyebrow">Explora la información</p>
+                    <h2 id="categorias-title">¿Qué quieres saber?</h2>
+                    <p>
+                        Selecciona una categoría para conocer nuestro proyecto, resolver tus dudas y descubrir cómo los llaveritos QR ayudan a conservar para siempre la huella que dejó una mascota.
+                    </p>
+                </div>
+
+                <div class="more-category-tabs" role="tablist"
+                     aria-label="Categorías de información">
+
+                    <button type="button" class="button button-primary more-category-tab active"
+                            role="tab" aria-selected="true" aria-controls="category-faq"
+                            data-category="faq">Preguntas frecuentes</button>
+
+                    <button type="button" class="button button-secondary more-category-tab"
+                            role="tab" aria-selected="false" aria-controls="category-producto"
+                            data-category="producto">Sobre el producto</button>
+
+                    <button type="button" class="button button-secondary more-category-tab"
+                            role="tab" aria-selected="false" aria-controls="category-funcionamiento"
+                            data-category="funcionamiento">Cómo funciona</button>
+
+                    <button type="button" class="button button-secondary more-category-tab"
+                            role="tab" aria-selected="false" aria-controls="category-qr"
+                            data-category="qr">Código QR</button>
+
+                    <button type="button" class="button button-secondary more-category-tab"
+                            role="tab" aria-selected="false" aria-controls="category-mascota"
+                            data-category="mascota">Registro de mascota</button>
+
+                    <button type="button" class="button button-secondary more-category-tab"
+                            role="tab" aria-selected="false" aria-controls="category-seguridad"
+                            data-category="seguridad">Privacidad y seguridad</button>
+
+                    <button type="button" class="button button-secondary more-category-tab"
+                            role="tab" aria-selected="false" aria-controls="category-compra"
+                            data-category="compra">Compra y pedidos</button>
+
+                    <button type="button" class="button button-secondary more-category-tab"
+                            role="tab" aria-selected="false" aria-controls="category-entrega"
+                            data-category="entrega">Entrega</button>
+
+                    <button type="button" class="button button-secondary more-category-tab"
+                            role="tab" aria-selected="false" aria-controls="category-cuidados"
+                            data-category="cuidados">Cuidados del llavero</button>
+
+                    <button type="button" class="button button-secondary more-category-tab"
+                            role="tab" aria-selected="false" aria-controls="category-memorial"
+                            data-category="memorial">Memoriales</button>
+
+                    <button type="button" class="button button-secondary more-category-tab"
+                            role="tab" aria-selected="false" aria-controls="category-problemas"
+                            data-category="problemas">Solución de problemas</button>
+
+                    <button type="button" class="button button-secondary more-category-tab"
+                            role="tab" aria-selected="false" aria-controls="category-soporte"
+                            data-category="soporte">Contacto y soporte</button>
+                </div>
+
+                <div class="more-category-content">
+
+                    <article class="more-category-panel active" id="category-faq"
+                             role="tabpanel" data-panel="faq">
+                        <h3>Preguntas frecuentes</h3>
+                        <div class="more-faq-list">
+                            <details>
+                                <summary>¿Qué es Huellitas Eternas?</summary>
+                                <p>
+                                    Huellitas Eternas es un proyecto creado para conservar y honrar los recuerdos de las mascotas que dejaron una huella importante en nuestras vidas. A través de nuestros llaveritos QR, buscamos mantener vivo ese vínculo y ofrecer un espacio donde cada historia pueda ser recordada con cariño.
+                                </p>
+                            </details>
+                            <details>
+                                <summary>¿Qué es el llavero QR?</summary>
+                                <p>
+                                    Es un llaverito personalizado que incorpora un código QR. Al escanearlo, se puede acceder a una página web con el memorial y la información de la mascota, permitiendo que su historia y sus recuerdos permanezcan siempre al alcance de quien la quiso.
+                                </p>
+                            </details>
+                            <details>
+                                <summary>¿Necesito instalar una aplicación?</summary>
+                                <p>
+                                    No necesitas instalar una aplicación. El sistema está pensado para funcionar desde un dispositivo con un navegador web compatible. Por ahora, Huellitas Eternas está disponible mediante navegador.
+                                </p>
+                            </details>
+                        </div>
+                    </article>
+
+                    <article class="more-category-panel" id="category-producto"
+                             role="tabpanel" data-panel="producto" hidden>
+                        <h3>Sobre el producto</h3>
+                        <p>
+                            Nuestros llaveritos están elaborados en resina y pueden tener diferentes formas. Son personalizados con un código QR y una fotografía de la mascota. Pero el producto no es solo el llavero: también incluye la creación de su memorial, porque creemos que una historia merece ser recordada. Al comprar un llavero, recibes un memorial adicional completamente gratis. Tu mascota dejó una huella; nosotros ayudamos a conservarla.
+                        </p>
+                    </article>
+
+                    <article class="more-category-panel" id="category-funcionamiento"
+                             role="tabpanel" data-panel="funcionamiento" hidden>
+                        <h3>Cómo funciona</h3>
+                        <p>
+                            El funcionamiento es sencillo: el llaverito lleva un código QR personalizado. Al escanearlo con la cámara de un celular, se abre la página web vinculada al código. Desde allí se puede consultar el memorial de la mascota, conocer su historia y conservar sus recuerdos en un solo lugar.
+                        </p>
+                    </article>
+
+                    <article class="more-category-panel" id="category-qr"
+                             role="tabpanel" data-panel="qr" hidden>
+                        <h3>Código QR</h3>
+                        <p>
+                            El código QR funciona como un acceso directo al memorial de la mascota. Al escanearlo, el usuario es dirigido a la página web correspondiente, donde puede encontrar la información, fotografías, historia y recuerdos que forman parte del memorial.
+                        </p>
+                    </article>
+
+                    <article class="more-category-panel" id="category-mascota"
+                             role="tabpanel" data-panel="mascota" hidden>
+                        <h3>Registro de mascota</h3>
+                        <p>
+                            El registro permite reunir la información importante de la mascota y construir su memorial. Se pueden incluir datos, fotografías, recuerdos y una historia que represente el vínculo que existió con ella. La información debe mantenerse actualizada para que el memorial refleje fielmente su recuerdo.
+                        </p>
+                    </article>
+
+                    <article class="more-category-panel" id="category-seguridad"
+                             role="tabpanel" data-panel="seguridad" hidden>
+                        <h3>Privacidad y seguridad</h3>
+                        <p>
+                            La privacidad es importante para Huellitas Eternas. La información y los recuerdos compartidos para crear un memorial deben utilizarse de manera responsable y respetuosa. Recomendamos no publicar datos personales sensibles que no sean necesarios para el memorial.
+                        </p>
+                    </article>
+
+                    <article class="more-category-panel" id="category-compra"
+                             role="tabpanel" data-panel="compra" hidden>
+                        <h3>Compra y pedidos</h3>
+                        <p>
+                            Para adquirir un llaverito QR, el usuario debe realizar su pedido y proporcionar la información necesaria para personalizarlo. El proceso está pensado para que cada llavero sea único y represente de manera especial a la mascota que se desea recordar.
+                        </p>
+                    </article>
+
+                    <article class="more-category-panel" id="category-entrega"
+                             role="tabpanel" data-panel="entrega" hidden>
+                        <h3>Entrega</h3>
+                        <p>
+                            Después de realizar el pedido, se prepara el llaverito personalizado y se coordina su entrega. Los tiempos y condiciones de envío pueden depender de la ubicación y de la modalidad de entrega disponible.
+                        </p>
+                    </article>
+
+                    <article class="more-category-panel" id="category-cuidados"
+                             role="tabpanel" data-panel="cuidados" hidden>
+                        <h3>Cuidados del llavero</h3>
+                        <p>
+                            Para conservar el llaverito en buenas condiciones, evita golpes fuertes, temperaturas extremas, productos químicos y el contacto prolongado con agua. Trátalo como un objeto de recuerdo para que pueda acompañarte durante mucho tiempo.
+                        </p>
+                    </article>
+
+                    <article class="more-category-panel" id="category-memorial"
+                             role="tabpanel" data-panel="memorial" hidden>
+                        <h3>Memoriales</h3>
+                        <p>
+                            Los memoriales son una parte esencial de Huellitas Eternas. Permiten reunir fotografías, historias, momentos especiales y palabras dedicadas a una mascota que ya no está físicamente, pero que sigue siendo importante. El objetivo es transformar el recuerdo en un espacio digital al que se pueda volver cuando se necesite.
+                        </p>
+                    </article>
+
+                    <article class="more-category-panel" id="category-problemas"
+                             role="tabpanel" data-panel="problemas" hidden>
+                        <h3>Solución de problemas</h3>
+                        <p>
+                            Si el código QR no funciona, comprueba que la cámara pueda enfocarlo correctamente y que el dispositivo tenga conexión a Internet. Si el problema continúa o la información del memorial no aparece correctamente, puedes comunicarte con nuestro equipo de soporte para recibir ayuda.
+                        </p>
+                    </article>
+
+                    <article class="more-category-panel" id="category-soporte"
+                             role="tabpanel" data-panel="soporte" hidden>
+                        <h3>Contacto y soporte</h3>
+                        <p>
+                            Si tienes dudas sobre tu llaverito QR, el memorial, el registro de la mascota, el pedido o el acceso mediante el código QR, puedes comunicarte con nosotros desde la sección de contacto. Queremos que la experiencia de conservar este recuerdo sea sencilla y significativa.
+                        </p>
+                        <a href="contact.html" class="button button-secondary">
+                            Ir a contacto
+                        </a>
+                    </article>
+
+                </div>
+            </div>
+        </section>
+
+        </main>
+
+
+    <!-- =====================================================
+         FOOTER
+         ===================================================== -->
+
+    <footer class="site-footer">
+
+
+        <div class="container footer-container">
+
+
+            <!-- ==================== MARCA ==================== -->
+
+            <div
+                class="footer-brand"
+                data-animation="fade-up"
+            >
+
+
+                <a
+                    href="home.html"
+                    class="brand"
+                    aria-label="Volver al inicio"
+                >
+
+
+                    <span
+                        class="brand-icon"
+                        aria-hidden="true"
+                    >
+
+                        <img
+                            src="../../003/images/icon.png"
+                            alt="icon"
+                        >
+
+                    </span>
+
+
+                    <span class="brand-text">
+
+                        <span class="brand-name">
+                            Huellitas
+                        </span>
+
+                        <span class="brand-subtitle">
+                            Eternas
+                        </span>
+
+                    </span>
+
+
+                </a>
+
+
+                <p class="footer-description">
+                    Un espacio para recordar, honrar y conservar
+                    las historias de quienes dejaron una huellita
+                    en nuestras vidas.
+                </p>
+
+
+            </div>
+
+
+
+            <!-- ==================== NAVEGACIÓN FOOTER ==================== -->
+
+            <div
+                class="footer-navigation"
+                data-animation="fade-up"
+                data-delay="100"
+            >
+
+
+                <h2 class="footer-title">
+                    Explora
+                </h2>
+
+
+                <ul>
+
+                    <li>
+                        <a href="../../../home.html">
+                            Inicio
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="../../../home.html#nosotros">
+                            Nosotros
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="product.html">
+                            Producto
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="memorials.html">
+                            Memoriales
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="opinions.html">
+                            Opiniones
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="contact.html">
+                            Contacto
+                        </a>
+                    </li>
+
+                </ul>
+
+
+            </div>
+
+
+
+            <!-- ==================== INFORMACIÓN ==================== -->
+
+            <div
+                class="footer-information"
+                data-animation="fade-up"
+                data-delay="200"
+            >
+
+
+                <h2 class="footer-title">
+                    Información
+                </h2>
+
+
+                <ul>
+
+
+                    <li>
+
+                        <a
+                            href="more.html"
+                        >
+                        Más información
+                        </a>
+
+                    </li>
+
+
+                    <li>
+
+                        <a
+                            href="terms.html"
+                        >
+                            Terminos
+                        </a>
+
+                    </li>
+
+
+                    <li>
+
+                        <a
+                            href="priv.html"
+                        >
+                            Privacidad
+                        </a>
+
+                    </li>
+
+
+                    <li>
+
+                        <a
+                            href="notice-and-socials.html"
+                        >
+                            Noticias y Redes Sociales
+                        </a>
+
+                    </li>
+
+
+                </ul>
+
+
+            </div>
+
+
+        </div>
+
+
+
+        <!-- ==================== FOOTER BOTTOM ==================== -->
+
+        <div class="footer-bottom">
+
+            <div class="container">
+
+                <p>
+                    © 2026 Huellitas Eternas.
+                    Todos los derechos reservados.
+                </p>
+
+            </div>
+
+        </div>
+
+    </footer>
+
+
+
+    <!-- =====================================================
+         JAVASCRIPT — CATEGORÍAS DE MÁS INFORMACIÓN
+         ===================================================== -->
+
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+
+            const tabs = document.querySelectorAll(".more-category-tab");
+            const panels = document.querySelectorAll(".more-category-panel");
+
+            function activateCategory(category) {
+
+                tabs.forEach(function (tab) {
+
+                    const active =
+                        tab.dataset.category === category;
+
+                    tab.classList.toggle("active", active);
+                    tab.setAttribute(
+                        "aria-selected",
+                        active ? "true" : "false"
+                    );
+
+                    tab.classList.toggle(
+                        "button-primary",
+                        active
+                    );
+
+                    tab.classList.toggle(
+                        "button-secondary",
+                        !active
+                    );
+                });
+
+                panels.forEach(function (panel) {
+
+                    const active =
+                        panel.dataset.panel === category;
+
+                    panel.hidden = !active;
+                    panel.classList.toggle("active", active);
+                });
+            }
+
+            tabs.forEach(function (tab) {
+
+                tab.addEventListener("click", function () {
+                    activateCategory(tab.dataset.category);
+                });
+
+                tab.addEventListener("keydown", function (event) {
+
+                    if (
+                        event.key === "Enter" ||
+                        event.key === " "
+                    ) {
+                        event.preventDefault();
+                        activateCategory(tab.dataset.category);
+                    }
+
+                });
+
+            });
+
+        });
+    </script>
+
+    <!-- =====================================================
+         JAVASCRIPT
+         =====================================================
+
+         Estos archivos ya están conectados.
+         ===================================================== -->
+
+
+    <script
+        src="../../002/js/s.js"
+        defer
+    ></script>
+
+
+    <script
+        src="../../002/js/b.js"
+        defer
+    ></script>
+
+
+    <script
+        src="../../002/js/a.js"
+        defer
+    ></script>
+
+
+    <script
+        src="../../002/js/sc.js"
+        defer
+    ></script>
+
+
+</body>
+
+</html>

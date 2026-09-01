@@ -1,0 +1,1202 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <meta name="description" content="Términos y Condiciones de uso de Huellitas Eternas.">
+    <meta name="robots" content="index, follow">
+
+    <title>Términos y Condiciones | Huellitas Eternas</title>
+    <link rel="shortcut icon" href="../../003/images/favicon.svg" type="image/x-icon">
+
+    <!-- CSS PRINCIPALES -->
+    <link rel="stylesheet" href="../../001/css/a.css">
+    <link rel="stylesheet" href="../../001/css/b.css">
+    <link rel="stylesheet" href="../../001/css/c.css">
+    <link rel="stylesheet" href="../../001/css/s.css">
+    <link rel="stylesheet" href="../../001/css/sc.css">
+
+    <!-- ESTILOS COMPLEMENTARIOS DE ESTA PÁGINA -->
+    <style>
+        .terms-page {
+            min-height: 100vh;
+        }
+
+        .terms-hero {
+            padding: 90px 20px 70px;
+            text-align: center;
+            background:
+                linear-gradient(
+                    135deg,
+                    rgba(250,171,233,.18),
+                    rgba(255,250,245,.95)
+                );
+        }
+
+        .terms-icon {
+            width: 82px;
+            height: 82px;
+            margin: 0 auto 22px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border-radius: 50%;
+            background: #fffaf5;
+            border: 2px solid rgba(217,143,156,.25);
+            box-shadow: 0 12px 30px rgba(125,79,89,.10);
+            font-size: 2.3rem;
+        }
+
+        .terms-eyebrow {
+            margin-bottom: 10px;
+            color: #d98f9c;
+            font-size: .85rem;
+            font-weight: 800;
+            letter-spacing: .12em;
+            text-transform: uppercase;
+        }
+
+        .terms-title {
+            max-width: 850px;
+            margin: 0 auto 18px;
+            color: #5f3d45;
+        }
+
+        .terms-intro {
+            max-width: 760px;
+            margin: 0 auto;
+            color: #765860;
+            line-height: 1.8;
+        }
+
+        .terms-date {
+            display: inline-flex;
+            margin-top: 22px;
+            padding: 9px 15px;
+            border-radius: 999px;
+            background: rgba(250,171,233,.15);
+            color: #765860;
+            font-size: .86rem;
+        }
+
+        .terms-layout {
+            display: grid;
+            grid-template-columns: 260px minmax(0,1fr);
+            gap: 35px;
+            align-items: start;
+            padding-top: 55px;
+            padding-bottom: 70px;
+        }
+
+        .terms-nav {
+            position: sticky;
+            top: 25px;
+            padding: 22px;
+            border: 1px solid rgba(217,143,156,.20);
+            border-radius: 22px;
+            background: #fffaf5;
+            box-shadow: 0 12px 30px rgba(125,79,89,.07);
+        }
+
+        .terms-nav h2 {
+            margin: 0 0 15px;
+            color: #5f3d45;
+            font-size: 1rem;
+        }
+
+        .terms-nav a {
+            display: block;
+            padding: 9px 10px;
+            border-radius: 10px;
+            color: #765860;
+            text-decoration: none;
+            font-size: .9rem;
+            transition: .2s;
+        }
+
+        .terms-nav a:hover {
+            background: rgba(250,171,233,.15);
+            color: #d98f9c;
+        }
+
+        .terms-card {
+            margin-bottom: 22px;
+            padding: 30px;
+            border: 1px solid rgba(217,143,156,.18);
+            border-radius: 24px;
+            background: #fffaf5;
+            box-shadow: 0 12px 30px rgba(125,79,89,.06);
+            scroll-margin-top: 30px;
+        }
+
+        .terms-number {
+            display: inline-flex;
+            width: 36px;
+            height: 36px;
+            margin-bottom: 13px;
+            align-items: center;
+            justify-content: center;
+            border-radius: 50%;
+            background: #d98f9c;
+            color: #fff;
+            font-size: .82rem;
+            font-weight: 800;
+        }
+
+        .terms-card h2 {
+            margin: 0 0 14px;
+            color: #5f3d45;
+        }
+
+        .terms-card h3 {
+            margin-top: 24px;
+            color: #6e4650;
+        }
+
+        .terms-card p,
+        .terms-card li {
+            color: #765860;
+            line-height: 1.8;
+        }
+
+        .terms-card ul {
+            padding-left: 22px;
+        }
+
+        .terms-card li {
+            margin-bottom: 8px;
+        }
+
+        .terms-highlight {
+            margin-top: 20px;
+            padding: 18px 20px;
+            border-left: 4px solid #d98f9c;
+            border-radius: 14px;
+            background: rgba(250,171,233,.10);
+        }
+
+        .terms-placeholder {
+            margin-top: 20px;
+            padding: 17px 19px;
+            border: 1px dashed #d98f9c;
+            border-radius: 14px;
+            background: rgba(255,250,245,.75);
+        }
+
+        .terms-placeholder strong {
+            color: #6e4650;
+        }
+
+        .terms-contact {
+            text-align: center;
+        }
+
+        .terms-footer {
+            padding: 30px 20px 50px;
+            text-align: center;
+            color: #8f6971;
+        }
+
+        @media (max-width: 850px) {
+            .terms-layout {
+                grid-template-columns: 1fr;
+            }
+
+            .terms-nav {
+                position: static;
+            }
+
+            .terms-nav-links {
+                display: grid;
+                grid-template-columns: repeat(2,minmax(0,1fr));
+                gap: 4px;
+            }
+        }
+
+        @media (max-width: 600px) {
+            .terms-hero {
+                padding: 65px 18px 50px;
+            }
+
+            .terms-layout {
+                padding-top: 35px;
+            }
+
+            .terms-card {
+                padding: 22px;
+                border-radius: 19px;
+            }
+
+            .terms-nav-links {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+
+<body class="terms-page">
+
+    <!-- =====================================================
+         ENCABEZADO
+         ===================================================== -->
+
+    <header class="terms-hero" data-animation="fade-up">
+        <div class="container">
+
+            <div class="terms-icon" aria-hidden="true">
+                <img src="../../003/images/icon.png" alt="logo">
+            </div>
+
+            <p class="terms-eyebrow">
+                Huellitas Eternas
+            </p>
+
+            <h1 class="terms-title">
+                Términos y Condiciones
+            </h1>
+
+            <p class="terms-intro">
+                Estos Términos y Condiciones establecen las reglas generales
+                para el uso del sitio web y de las funciones digitales de
+                Huellitas Eternas.
+            </p>
+
+            <span class="terms-date">
+                📅 Última actualización: 31 de agosto de 2026
+            </span>
+
+        </div>
+    </header>
+
+
+    <!-- =====================================================
+         CONTENIDO
+         ===================================================== -->
+
+    <main>
+        <div class="container terms-layout">
+
+            <!-- ÍNDICE -->
+
+            <aside class="terms-nav" aria-label="Índice de términos">
+
+                <h2>
+                    En esta página
+                </h2>
+
+                <nav class="terms-nav-links">
+
+                    <a href="#aceptacion">
+                        Aceptación
+                    </a>
+
+                    <a href="#servicio">
+                        Servicio
+                    </a>
+
+                    <a href="#usuarios">
+                        Usuarios
+                    </a>
+
+                    <a href="#cuentas">
+                        Cuentas y perfiles
+                    </a>
+
+                    <a href="#mascotas">
+                        Mascotas
+                    </a>
+
+                    <a href="#qr">
+                        Código QR
+                    </a>
+
+                    <a href="#contenido">
+                        Contenido
+                    </a>
+
+                    <a href="#uso-permitido">
+                        Uso permitido
+                    </a>
+
+                    <a href="#uso-prohibido">
+                        Uso prohibido
+                    </a>
+
+                    <a href="#propiedad">
+                        Propiedad intelectual
+                    </a>
+
+                    <a href="#disponibilidad">
+                        Disponibilidad
+                    </a>
+
+                    <a href="#responsabilidad">
+                        Responsabilidad
+                    </a>
+
+                    <a href="#cambios">
+                        Cambios
+                    </a>
+
+                    <a href="#contacto">
+                        Contacto
+                    </a>
+
+                </nav>
+
+            </aside>
+
+
+            <!-- SECCIONES -->
+
+            <div>
+
+                <section
+                    class="terms-card"
+                    id="aceptacion"
+                    data-animation="fade-up"
+                >
+
+                    <span class="terms-number">
+                        01
+                    </span>
+
+                    <h2>
+                        Aceptación de los términos
+                    </h2>
+
+                    <p>
+                        Al acceder o utilizar el sitio web de Huellitas Eternas,
+                        la persona usuaria reconoce que ha leído y comprendido
+                        estos Términos y Condiciones.
+                    </p>
+
+                    <p>
+                        Si no está de acuerdo con ellos, deberá abstenerse
+                        de utilizar las funciones correspondientes del sitio.
+                    </p>
+
+                    <div class="terms-highlight">
+
+                        <p>
+                            <strong>
+                                Importante:
+                            </strong>
+                            estos términos deberán revisarse y actualizarse
+                            cuando se definan todas las funciones comerciales
+                            y digitales definitivas del proyecto.
+                        </p>
+
+                    </div>
+
+                </section>
+
+
+                <section
+                    class="terms-card"
+                    id="servicio"
+                    data-animation="fade-up"
+                >
+
+                    <span class="terms-number">
+                        02
+                    </span>
+
+                    <h2>
+                        Sobre el servicio
+                    </h2>
+
+                    <p>
+                        Huellitas Eternas es un proyecto orientado a crear
+                        productos y experiencias digitales relacionadas con
+                        el vínculo entre las personas y sus mascotas.
+                    </p>
+
+                    <p>
+                        Entre sus posibles funciones se encuentran los
+                        llaveros con código QR y espacios digitales destinados
+                        a información relacionada con mascotas.
+                    </p>
+
+                    <p>
+                        Las características concretas del servicio pueden
+                        cambiar a medida que el proyecto evolucione.
+                    </p>
+
+                </section>
+
+
+                <section
+                    class="terms-card"
+                    id="usuarios"
+                    data-animation="fade-up"
+                >
+
+                    <span class="terms-number">
+                        03
+                    </span>
+
+                    <h2>
+                        Usuarios
+                    </h2>
+
+                    <p>
+                        La persona usuaria se compromete a proporcionar
+                        información correcta cuando una función del servicio
+                        requiera datos.
+                    </p>
+
+                    <p>
+                        También se compromete a utilizar el sitio de manera
+                        responsable y respetuosa con otras personas,
+                        mascotas y la comunidad.
+                    </p>
+
+                </section>
+
+
+                <section
+                    class="terms-card"
+                    id="cuentas"
+                    data-animation="fade-up"
+                >
+
+                    <span class="terms-number">
+                        04
+                    </span>
+
+                    <h2>
+                        Cuentas y perfiles
+                    </h2>
+
+                    <p>
+                        Si Huellitas Eternas incorpora cuentas, perfiles
+                        o espacios privados, la persona responsable de
+                        dichos espacios deberá mantener bajo su control
+                        sus credenciales de acceso.
+                    </p>
+
+                    <p>
+                        No se deberá utilizar una cuenta para hacerse pasar
+                        por otra persona ni para publicar información
+                        deliberadamente falsa o dañina.
+                    </p>
+
+                    <div class="terms-placeholder">
+
+                        <strong>
+                            📝 Configuración futura
+                        </strong>
+
+                        <p>
+                            Cuando el sistema de cuentas esté implementado,
+                            aquí deberán incorporarse las reglas específicas
+                            sobre registro, acceso y cierre de cuentas.
+                        </p>
+
+                    </div>
+
+                </section>
+
+
+                <section
+                    class="terms-card"
+                    id="mascotas"
+                    data-animation="fade-up"
+                >
+
+                    <span class="terms-number">
+                        05
+                    </span>
+
+                    <h2>
+                        Información de las mascotas
+                    </h2>
+
+                    <p>
+                        La información publicada sobre una mascota debe ser
+                        proporcionada por su responsable o por una persona
+                        que tenga autorización para compartirla.
+                    </p>
+
+                    <ul>
+                        <li>
+                            El nombre de la mascota debe utilizarse
+                            de manera responsable.
+                        </li>
+
+                        <li>
+                            Las fotografías deben contar con las autorizaciones
+                            necesarias.
+                        </li>
+
+                        <li>
+                            No se recomienda publicar información personal
+                            innecesaria.
+                        </li>
+
+                        <li>
+                            La persona responsable debe comprobar qué información
+                            desea hacer pública.
+                        </li>
+                    </ul>
+
+                </section>
+
+
+                <section
+                    class="terms-card"
+                    id="qr"
+                    data-animation="fade-up"
+                >
+
+                    <span class="terms-number">
+                        06
+                    </span>
+
+                    <h2>
+                        Códigos QR
+                    </h2>
+
+                    <p>
+                        Los códigos QR pueden funcionar como un acceso rápido
+                        hacia un espacio digital asociado a una mascota.
+                    </p>
+
+                    <p>
+                        La persona responsable del código deberá comprobar
+                        periódicamente que la información vinculada sea
+                        correcta y apropiada para su publicación.
+                    </p>
+
+                    <div class="terms-highlight">
+
+                        <p>
+                            Un código QR no debe utilizarse para publicar
+                            información que pueda poner en riesgo a una persona,
+                            una mascota o cualquier tercero.
+                        </p>
+
+                    </div>
+
+                </section>
+
+
+                <section
+                    class="terms-card"
+                    id="contenido"
+                    data-animation="fade-up"
+                >
+
+                    <span class="terms-number">
+                        07
+                    </span>
+
+                    <h2>
+                        Contenido proporcionado por los usuarios
+                    </h2>
+
+                    <p>
+                        Las fotografías, textos, historias y demás materiales
+                        proporcionados por los usuarios deben respetar los
+                        derechos de otras personas.
+                    </p>
+
+                    <p>
+                        La persona que publica contenido es responsable de
+                        asegurarse de que cuenta con las autorizaciones
+                        necesarias para hacerlo.
+                    </p>
+
+                </section>
+
+
+                <section
+                    class="terms-card"
+                    id="uso-permitido"
+                    data-animation="fade-up"
+                >
+
+                    <span class="terms-number">
+                        08
+                    </span>
+
+                    <h2>
+                        Uso permitido
+                    </h2>
+
+                    <p>
+                        El sitio debe utilizarse únicamente para sus finalidades
+                        legítimas y de acuerdo con estos términos.
+                    </p>
+
+                    <ul>
+                        <li>
+                            Consultar información del proyecto.
+                        </li>
+
+                        <li>
+                            Utilizar las funciones disponibles.
+                        </li>
+
+                        <li>
+                            Gestionar información propia cuando el servicio
+                            lo permita.
+                        </li>
+
+                        <li>
+                            Contactar con Huellitas Eternas mediante
+                            los canales habilitados.
+                        </li>
+                    </ul>
+
+                </section>
+
+
+                <section
+                    class="terms-card"
+                    id="uso-prohibido"
+                    data-animation="fade-up"
+                >
+
+                    <span class="terms-number">
+                        09
+                    </span>
+
+                    <h2>
+                        Uso prohibido
+                    </h2>
+
+                    <p>
+                        No está permitido utilizar el sitio para actividades
+                        que puedan perjudicar a Huellitas Eternas, a sus
+                        usuarios, a las mascotas o a terceros.
+                    </p>
+
+                    <ul>
+                        <li>
+                            Intentar acceder sin autorización a sistemas
+                            o información.
+                        </li>
+
+                        <li>
+                            Interferir deliberadamente con el funcionamiento
+                            del sitio.
+                        </li>
+
+                        <li>
+                            Utilizar información de terceros sin autorización.
+                        </li>
+
+                        <li>
+                            Publicar contenido ilegal, fraudulento,
+                            amenazante o dañino.
+                        </li>
+
+                        <li>
+                            Utilizar el sitio para suplantar la identidad
+                            de otra persona.
+                        </li>
+                    </ul>
+
+                </section>
+
+
+                <section
+                    class="terms-card"
+                    id="propiedad"
+                    data-animation="fade-up"
+                >
+
+                    <span class="terms-number">
+                        10
+                    </span>
+
+                    <h2>
+                        Propiedad intelectual
+                    </h2>
+
+                    <p>
+                        Los elementos propios de Huellitas Eternas, incluyendo
+                        su identidad visual, diseños, textos, gráficos,
+                        código y otros materiales originales, deben utilizarse
+                        respetando los derechos correspondientes.
+                    </p>
+
+                    <p>
+                        El contenido proporcionado por los usuarios continúa
+                        sujeto a los derechos que correspondan a sus respectivos
+                        titulares.
+                    </p>
+
+                    <div class="terms-placeholder">
+
+                        <strong>
+                            📝 Información pendiente
+                        </strong>
+
+                        <p>
+                            Esta sección podrá ampliarse cuando se definan
+                            formalmente las marcas, licencias y condiciones
+                            de uso de los contenidos del proyecto.
+                        </p>
+
+                    </div>
+
+                </section>
+
+
+                <section
+                    class="terms-card"
+                    id="disponibilidad"
+                    data-animation="fade-up"
+                >
+
+                    <span class="terms-number">
+                        11
+                    </span>
+
+                    <h2>
+                        Disponibilidad del sitio
+                    </h2>
+
+                    <p>
+                        Procuramos mantener el sitio disponible y funcionando
+                        correctamente, pero pueden producirse interrupciones
+                        por mantenimiento, actualizaciones, problemas técnicos
+                        o circunstancias externas.
+                    </p>
+
+                    <p>
+                        Huellitas Eternas podrá modificar, suspender o retirar
+                        determinadas funciones cuando sea necesario para
+                        mantener o mejorar el proyecto.
+                    </p>
+
+                </section>
+
+
+                <section
+                    class="terms-card"
+                    id="responsabilidad"
+                    data-animation="fade-up"
+                >
+
+                    <span class="terms-number">
+                        12
+                    </span>
+
+                    <h2>
+                        Responsabilidad
+                    </h2>
+
+                    <p>
+                        La persona usuaria es responsable del contenido que
+                        publique y del uso que haga de las funciones disponibles.
+                    </p>
+
+                    <p>
+                        Huellitas Eternas procurará mantener información
+                        y herramientas útiles, pero no garantiza que el sitio
+                        esté libre de interrupciones o errores en todo momento.
+                    </p>
+
+                    <div class="terms-highlight">
+
+                        <p>
+                            Esta sección deberá revisarse jurídicamente antes
+                            de publicar una versión definitiva de los términos.
+                        </p>
+
+                    </div>
+
+                </section>
+
+
+                <section
+                    class="terms-card"
+                    id="cambios"
+                    data-animation="fade-up"
+                >
+
+                    <span class="terms-number">
+                        13
+                    </span>
+
+                    <h2>
+                        Cambios en los Términos
+                    </h2>
+
+                    <p>
+                        Estos términos pueden actualizarse cuando cambien
+                        las funciones, servicios, tecnologías o condiciones
+                        de funcionamiento de Huellitas Eternas.
+                    </p>
+
+                    <p>
+                        La fecha de actualización deberá modificarse cuando
+                        se publique una nueva versión.
+                    </p>
+
+                </section>
+
+
+                <section
+                    class="terms-card terms-contact"
+                    id="contacto"
+                    data-animation="fade-up"
+                >
+
+                    <span class="terms-number">
+                        14
+                    </span>
+
+                    <h2>
+                        Contacto
+                    </h2>
+
+                    <p>
+                        Si tienes dudas sobre estos Términos y Condiciones,
+                        podrás comunicarte con Huellitas Eternas mediante
+                        el canal oficial de contacto.
+                    </p>
+
+                    <div class="terms-placeholder">
+
+                        <strong>
+                            📩 Correo de contacto pendiente
+                        </strong>
+
+                        <div
+                    class="memory-actions"
+                    data-animation="fade-up"
+                    data-delay="300"
+                >
+
+
+                    <a
+                        href="contact.html"
+                        class="button button-primary"
+                    >
+                        Contacto
+                    </a>
+
+
+                </div>
+
+                    </div>
+
+                </section>
+
+
+                <section
+                    class="terms-card"
+                    id="version"
+                    data-animation="fade-up"
+                >
+
+                    <span class="terms-number">
+                        15
+                    </span>
+
+                    <h2>
+                        Versión y fecha
+                    </h2>
+
+                    <p>
+                        <strong>
+                            Versión:
+                        </strong>
+                        1.0
+                    </p>
+
+                    <p>
+                        <strong>
+                            Fecha indicada:
+                        </strong>
+                        31 de agosto de 2026.
+                    </p>
+
+                    <div class="terms-highlight">
+
+                        <p>
+                            Este documento es una estructura inicial para
+                            el sitio web. Antes de considerarlo un documento
+                            legal definitivo, deberá revisarse de acuerdo
+                            con las actividades reales de Huellitas Eternas
+                            y la legislación que resulte aplicable.
+                        </p>
+
+                    </div>
+
+                </section>
+
+            </div>
+
+        </div>
+    </main>
+
+
+    <!-- =====================================================
+         FOOTER
+         ===================================================== -->
+
+    <footer class="site-footer">
+
+
+        <div class="container footer-container">
+
+
+            <!-- ==================== MARCA ==================== -->
+
+            <div
+                class="footer-brand"
+                data-animation="fade-up"
+            >
+
+
+                <a
+                    href="../../../home.html"
+                    class="brand"
+                    aria-label="Volver al inicio"
+                >
+
+
+                    <span
+                        class="brand-icon"
+                        aria-hidden="true"
+                    >
+
+                        <img
+                            src="../../003/images/icon.png"
+                            alt="icon"
+                        >
+
+                    </span>
+
+
+                    <span class="brand-text">
+
+                        <span class="brand-name">
+                            Huellitas
+                        </span>
+
+                        <span class="brand-subtitle">
+                            Eternas
+                        </span>
+
+                    </span>
+
+
+                </a>
+
+
+                <p class="footer-description">
+                    Un espacio para recordar, honrar y conservar
+                    las historias de quienes dejaron una huellita
+                    en nuestras vidas.
+                </p>
+
+
+            </div>
+
+
+
+            <!-- ==================== NAVEGACIÓN FOOTER ==================== -->
+
+            <div
+                class="footer-navigation"
+                data-animation="fade-up"
+                data-delay="100"
+            >
+
+
+                <h2 class="footer-title">
+                    Explora
+                </h2>
+
+
+                <ul>
+
+                    <li>
+                        <a href="../../../home.html">
+                            Inicio
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="../../../home.html#nosotros">
+                            Nosotros
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="product.html">
+                            Producto
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="memorials.html">
+                            Memoriales
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="opinions.html">
+                            Opiniones
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="contact.html">
+                            Contacto
+                        </a>
+                    </li>
+
+                </ul>
+
+
+            </div>
+
+
+
+            <!-- ==================== INFORMACIÓN ==================== -->
+
+            <div
+                class="footer-information"
+                data-animation="fade-up"
+                data-delay="200"
+            >
+
+
+                <h2 class="footer-title">
+                    Información
+                </h2>
+
+
+                <ul>
+
+
+                    <li>
+
+                        <a
+                            href="more.html"
+                        >
+                        Más información
+                        </a>
+
+                    </li>
+
+
+                    <li>
+
+                        <a
+                            href="terms.html"
+                        >
+                            Terminos
+                        </a>
+
+                    </li>
+
+
+                    <li>
+
+                        <a
+                            href="priv.html"
+                        >
+                            Privacidad
+                        </a>
+
+                    </li>
+
+
+                    <li>
+
+                        <a
+                            href="notice-and-socials.html"
+                        >
+                            Noticias y Redes Sociales
+                        </a>
+
+                    </li>
+
+
+                </ul>
+
+
+            </div>
+
+
+        </div>
+
+
+
+        <!-- ==================== FOOTER BOTTOM ==================== -->
+
+        <div class="footer-bottom">
+
+            <div class="container">
+
+                <p>
+                    © 2026 Huellitas Eternas.
+                    Todos los derechos reservados.
+                </p>
+
+            </div>
+
+        </div>
+
+    </footer>
+
+<script src="../../002/js/a.js" defer></script>
+<script src="../../002/js/b.js"></script>
+<script src="../../002/js/s.js" defer></script>
+<script src="../../002/js/sc.js" defer></script>
+
+
+    <!-- =====================================================
+         NAVEGACIÓN SUAVE DEL ÍNDICE
+         ===================================================== -->
+
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+
+            const links =
+                document.querySelectorAll(".terms-nav a");
+
+            links.forEach(function (link) {
+
+                link.addEventListener("click", function (event) {
+
+                    const href =
+                        link.getAttribute("href");
+
+                    if (!href || !href.startsWith("#")) {
+                        return;
+                    }
+
+                    const target =
+                        document.querySelector(href);
+
+                    if (!target) {
+                        return;
+                    }
+
+                    event.preventDefault();
+
+                    target.scrollIntoView({
+                        behavior: "smooth",
+                        block: "start"
+                    });
+
+                });
+
+            });
+
+        });
+    </script>
+
+</body>
+</html>
