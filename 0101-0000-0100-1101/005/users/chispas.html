@@ -3,8 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Memorial de Chispitas | Huellitas Eternas">
-    <title>Memorial de Chispitas | Huellitas Eternas</title>
+    <meta name="description" content="Memorial de Chispas | Huellitas Eternas">
+    <title>Memorial de Chispas | Huellitas Eternas</title>
 
     <link rel="shortcut icon" href="../../003/images/perro.png" type="image/x-icon">
 
@@ -15,210 +15,65 @@
     <link rel="stylesheet" href="../../001/css/a.css">
     <link rel="stylesheet" href="../../001/css/sc.css">
 
-    <!-- CSS ESPECÍFICO DEL MEMORIAL -->
-    <style>
-        .chispitas-page {
-            min-height: 100vh;
-        }
-
-        .chispitas-hero {
-            text-align: center;
-            padding: 80px 20px 45px;
-        }
-
-        .chispitas-subtitle {
-            max-width: 720px;
-            margin: 0 auto;
-        }
-
-        .memorial-navigation {
-            display: flex;
-            flex-wrap: wrap;
-            justify-content: center;
-            gap: 12px;
-            margin: 25px auto 45px;
-            padding: 0 20px;
-        }
-
-        .memorial-tab {
-            cursor: pointer;
-        }
-
-        .memorial-section {
-            max-width: 950px;
-            margin: 0 auto 35px;
-            padding: 35px 25px;
-            border-radius: 20px;
-        }
-
-        .memorial-section[hidden] {
-            display: none;
-        }
-
-        .memorial-placeholder {
-            margin-top: 15px;
-            padding: 25px;
-            border-radius: 15px;
-            text-align: center;
-        }
-
-        .memory-gallery {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(210px, 1fr));
-            gap: 18px;
-            margin-top: 20px;
-        }
-
-        .memory-gallery figure {
-            margin: 0;
-        }
-
-        .memory-gallery img {
-            width: 100%;
-            aspect-ratio: 1 / 1;
-            object-fit: cover;
-            border-radius: 16px;
-        }
-
-        .memory-gallery figcaption {
-            margin-top: 8px;
-            text-align: center;
-        }
-
-        .media-box {
-            margin-top: 20px;
-        }
-
-        .media-box video,
-        .media-box audio {
-            width: 100%;
-            max-width: 750px;
-        }
-
-        .reflection {
-            text-align: center;
-            font-size: 1.15rem;
-            line-height: 1.8;
-        }
-
-        .back-link {
-            display: inline-block;
-            margin: 10px auto 50px;
-        }
-
-        @media (max-width: 600px) {
-            .chispitas-hero {
-                padding-top: 55px;
-            }
-
-            .memorial-section {
-                margin-left: 15px;
-                margin-right: 15px;
-                padding: 25px 18px;
-            }
-        }
-    </style>
 </head>
 
-<body class="chispitas-page">
+<body class="Chispas-page">
 
     <main id="contenido-principal">
 
-        <section class="chispitas-hero" aria-labelledby="chispitas-title">
-            <p class="section-eyebrow">Chispas</p>
-            <h1 id="chispitas-title" class="hero-title">El recuerdo de Chispitas</h1>
-            <p class="chispitas-subtitle section-description">
-                Un espacio para conservar su historia, sus imágenes,
-                sus momentos especiales y todo aquello que hizo única su huellita.
-            </p>
-        </section>
-
-        <!-- CATEGORÍAS -->
-        <nav class="memorial-navigation" aria-label="Categorías del memorial">
-            <button type="button" class="button button-primary memorial-tab" data-target="introduccion">
-                Introducción
-            </button>
-            <button type="button" class="button button-secondary memorial-tab" data-target="historia">
-                Historia
-            </button>
-            <button type="button" class="button button-secondary memorial-tab" data-target="imagenes">
-                Imágenes
-            </button>
-            <button type="button" class="button button-secondary memorial-tab" data-target="videos">
-                Videos
-            </button>
-            <button type="button" class="button button-secondary memorial-tab" data-target="audios">
-                Audios
-            </button>
-            <button type="button" class="button button-secondary memorial-tab" data-target="reflexion">
-                Una frase de reflexión
-            </button>
-        </nav>
-
-        <!-- INTRODUCCIÓN -->
-        <section id="introduccion" class="memorial-section" data-memorial-section>
-            <p class="section-eyebrow">Una huellita que permanece</p>
-            <h2 class="section-title">Bienvenido al memorial de Chispitas</h2>
-            <p class="section-description">
-                Este memorial fue creado para conservar y recordar a Chispitas.
-                Aquí se pueden reunir fotografías, videos, audios, historias
-                y palabras especiales que permitan mantener presente su recuerdo.
-            </p>
-        </section>
-
-        <!-- HISTORIA -->
-        <section id="historia" class="memorial-section" data-memorial-section hidden>
-            <p class="section-eyebrow">Su historia</p>
-            <h2 class="section-title">Una historia que merece ser recordada</h2>
-            <p class="section-description">
-                Este espacio está destinado a contar la historia de Chispitas:
-                sus momentos importantes, sus costumbres, sus juegos, las personas
-                que compartieron su vida y todos esos pequeños detalles que la hicieron especial.
-            </p>
-            <div class="memorial-placeholder">
-                <p><strong>Historia de Chispitas:</strong>
-                agrega aquí la historia real, anécdotas y recuerdos que quieras conservar.</p>
+         <!-- =================================================
+             HERO DEL MEMORIAL
+             ================================================= -->
+        <section class="page-hero-section memorial-hero" id="memoriales" data-animation="fade-up" aria-labelledby="page-title">
+            <div class="container page-hero-container">
+                <div class="page-hero-content" data-animation="fade-left">
+                    <h1 id="page-title" class="hero-title">
+                        Chispas
+                    </h1>
+                <div class="page-hero-media" data-animation="fade-right" data-delay="200"> 
+                    <img src="../../003/images/users/Chispas-Publica.png" alt="Espacio conmemorativo de Huellitas Eternas" class="page-hero-image">
+                </div>
             </div>
         </section>
 
         <!-- IMÁGENES -->
-        <section id="imagenes" class="memorial-section" data-memorial-section hidden>
+        <section id="imagenes" class="memorial-section" >
             <p class="section-eyebrow">Recuerdos en imágenes</p>
-            <h2 class="section-title">Imágenes de Chispitas</h2>
+            <h2 class="section-title">Imágenes de Chispas</h2>
             <p class="section-description">
                 Agrega aquí las fotografías que quieras conservar en su memorial.
             </p>
 
             <div class="memory-gallery">
                 <figure>
-                    <img src="../../003/images/users/Chispas-Publica.png" alt="Fotografía de Chispitas">
-                    <figcaption>Un recuerdo de Chispitas.</figcaption>
+                    <img src="../../003/images/users/Chispas-Publica.png" alt="Fotografía de Chispas" width="300" height="300">
+                    <figcaption>Un recuerdo de Chispas.</figcaption>
                 </figure>
                 <figure>
-                    <img src="../../003/images/users/Chispas-Publica (2).png" alt="Otra fotografía de Chispitas">
+                    <img src="../../003/images/users/Chispas-Publica (2).png" alt="Otra fotografía de Chispas"  width="300" height="300">
                     <figcaption>Un momento especial.</figcaption>
                 </figure>
                 <figure>
-                    <img src="../../003/images/users/Chispas-Publica (3).png" alt="Fotografía adicional de Chispitas">
+                    <img src="../../003/images/users/Chispas-Publica (3).png" alt="Fotografía adicional de Chispas"  width="300" height="300">
                     <figcaption>Una huellita para recordar.</figcaption>
                 </figure>
                 <figure>
-                    <img src="../../003/images/users/Chispas-Publica (4).png" alt="Fotografía adicional de Chispitas">
+                    <img src="../../003/images/users/Chispas-Publica (4).png" alt="Fotografía adicional de Chispas"  width="300" height="300">
                     <figcaption>Una huellita que adorar.</figcaption>
                 </figure>
             </div>
         </section>
 
         <!-- VIDEOS -->
-        <section id="videos" class="memorial-section" data-memorial-section hidden>
+        <section id="videos" class="memorial-section" >
             <p class="section-eyebrow">Momentos que vuelven a vivir</p>
-            <h2 class="section-title">Videos de Chispitas</h2>
+            <h2 class="section-title">Videos de Chispas</h2>
             <p class="section-description">
                 Puedes colocar aquí videos de momentos especiales para conservarlos
                 como parte de su historia.
             </p>
             <div class="media-box">
-                <video controls preload="metadata" width="300" height="300">
+                <video controls preload="metadata">
                     <source src="../../003/videos/Chispas-Publico.mp4" type="video/mp4">
                     Tu navegador no puede reproducir este video.
                 </video>
@@ -226,12 +81,12 @@
         </section>
 
         <!-- AUDIOS -->
-        <section id="audios" class="memorial-section" data-memorial-section hidden>
-            <p class="section-eyebrow">Voces y sonidos para recordar</p>
-            <h2 class="section-title">Audios de Chispitas</h2>
+        <section id="audios" class="memorial-section" >
+            <p class="section-eyebrow">Ladridos para recordar</p>
+            <h2 class="section-title">Ladridos de Chispas</h2>
             <p class="section-description">
                 Este espacio puede guardar sonidos, grabaciones o mensajes especiales
-                relacionados con Chispitas.
+                relacionados con Chispas.
             </p>
             <div class="media-box">
                 <audio controls preload="metadata">
@@ -240,20 +95,6 @@
                 </audio>
             </div>
         </section>
-
-        <!-- REFLEXIÓN -->
-        <section id="reflexion" class="memorial-section" data-memorial-section hidden>
-            <p class="section-eyebrow">Para recordar</p>
-            <h2 class="section-title">Una frase de reflexión</h2>
-            <p class="reflection">
-                “Una mascota puede dejar de caminar a nuestro lado,
-                pero la huella que dejó en nuestro corazón puede permanecer para siempre.”
-            </p>
-            <p class="section-description" style="text-align:center;">
-                Cada recuerdo es una forma de mantener viva una historia.
-            </p>
-        </section>
-
     </main>
 
     <!-- =====================================================
@@ -283,49 +124,6 @@
     <script src="../../002/js/b.js" defer></script>
     <script src="../../002/js/a.js" defer></script>
     <script src="../../002/js/sc.js" defer></script>
-
-    <!-- JAVASCRIPT DEL MEMORIAL -->
-    <script>
-        document.addEventListener("DOMContentLoaded", () => {
-            const tabs = Array.from(document.querySelectorAll(".memorial-tab"));
-            const sections = Array.from(
-                document.querySelectorAll("[data-memorial-section]")
-            );
-
-            const showSection = (targetId, updateHash = true) => {
-                sections.forEach((section) => {
-                    section.hidden = section.id !== targetId;
-                });
-
-                tabs.forEach((tab) => {
-                    const active = tab.dataset.target === targetId;
-                    tab.classList.toggle("button-primary", active);
-                    tab.classList.toggle("button-secondary", !active);
-                    tab.setAttribute("aria-selected", String(active));
-                });
-
-                if (updateHash) {
-                    history.replaceState(null, "", `#${targetId}`);
-                }
-            };
-
-            tabs.forEach((tab) => {
-                tab.addEventListener("click", () => {
-                    showSection(tab.dataset.target);
-                });
-            });
-
-            const initialSection = window.location.hash
-                ? window.location.hash.substring(1)
-                : "introduccion";
-
-            const validSection = sections.some(
-                (section) => section.id === initialSection
-            );
-
-            showSection(validSection ? initialSection : "introduccion", false);
-        });
-    </script>
 
 </body>
 </html>
